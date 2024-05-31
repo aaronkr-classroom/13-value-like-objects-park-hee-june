@@ -8,9 +8,9 @@
 #include <iomanip>
 #include <iostream> // cin/cout을 사용하기 위해
 #include <stdexcept>
-#include <Str>
+// #include <Str> -> "Str.h"를 대신 사용
 #include "Vec.h" // vector -> Vec
-#include "../Chp11/Vec.h"
+#include "Str.h"
 
 #include "analysis.h"
 #include "grade.h"
@@ -20,35 +20,6 @@
 using namespace std;
 
 int main() {
-    /*
-    // 파일스트림 만들고 "txt" 파일을 읽기
-    ifstream student_file("grades.txt"); // 에런
-    ifstream student_file_did("grades_did.txt"); // 에런
-    ifstream student_file_didnt("grades_didnt.txt"); // 에런
-
-    // 6장: 모든 과제를 제출한 학생과 그렇지 않은 학생
-    Vec<Student_info> students, did, didnt;
-    Student_info record;
-    Str::size_type maxlen = 0;
-
-    // 학생 이름과 모든 점수를 읽어 저장하고
-    // 가장 긴 이금을 찾음.
-    while (read(student_file, record)) { // 에런
-        // cin을 사용하면 직접 사용자 입력만 받을 수 있다
-        // student_file은 ifstream이어서 파일 입력 받을 수 있다
-
-        maxlen = max(maxlen, record.name.size());
-        // Aaron: max(0, 5) = 5
-        students.push_back(record);
-
-        if (did_all_hw(record)) {
-            did.push_back(record);
-        }
-        else {
-            didnt.push_back(record);
-        }
-    }
-    */
 
     int fileChoice = printGreeting();
     // cout << fileChoice << typeid(fileChoice).name();
